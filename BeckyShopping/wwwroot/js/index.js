@@ -1,15 +1,29 @@
-﻿var x = 0;
-var s = "";
+﻿$(document).ready(function () { 
+    var x = 0;
+    var s = "";
 
-console.log("Welcome to Becky Shopping");
+    console.log("Welcome to Becky Shopping");
 
-var theForm = document.getElementById("theForm");
-theForm.hidden = true;
+    var theForm = $("#theForm");
+    theForm.hide();
 
-var button = document.getElementById("buyButton");
-button.addEventListener("click", function () {
-    console.log("Buying item");
+    var button = $("#buyButton");
+    button.on("click", function () {
+        console.log("Buying item");
+    });
+
+    var productinfo = $(".product-props li");
+    productinfo.on("click", function () {
+        console.log("You clicked on " + $(this).text());
+    });
+
+
+    var $loginToggle = $("#loginToggle");
+    var $popupForm = $(".popup-form");
+
+    $loginToggle.on("click", function () {
+        $popupForm.fadeToggle(1000);
+    })
+
+
 });
-
-var productinfo = document.getElementsByClassName("product-props");
-var listItems = productInfo.item[0].children;
