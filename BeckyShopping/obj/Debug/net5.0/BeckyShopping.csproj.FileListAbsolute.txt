@@ -35,3 +35,6 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckySh
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckyShopping.csproj.CopyComplete
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\App\About.cshtml.g.cs
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\App\Contact.cshtml.g.cs
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
