@@ -21,3 +21,4 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckySh
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\ref\BeckyShopping.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckyShopping.pdb
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckyShopping.genruntimeconfig.cache
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\libman.json
