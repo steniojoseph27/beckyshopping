@@ -1,13 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Becky Shopping</title>
-    <link href="css/site.css" rel="stylesheet" />
+    <title>Becky Shopping: @ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <h2>Welcome to Becky Shopping!</h2>
+    <h2>@ViewBag.Title</h2>
     <div class="product-info">
-        <img src="/img/2021-new-arrivals-dress-shirts-woman-sum_main-2.jpg" alt="Alternate Text" />
+        <img src="~/img/2021-new-arrivals-dress-shirts-woman-sum_main-2.jpg" alt="Alternate Text" />
         <h3>Woman Dress</h3>
         <ul class="product-props">
             <li>Price: $25.99</li>
@@ -61,7 +65,7 @@
         </form>
     </div>
 
-    <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/index.js"></script>
 </body>
 </html>
