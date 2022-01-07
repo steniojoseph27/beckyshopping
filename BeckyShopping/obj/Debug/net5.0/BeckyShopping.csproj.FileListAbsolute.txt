@@ -33,3 +33,5 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\V
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckyShopping.RazorTargetAssemblyInfo.cs
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckyShopping.Views.pdb
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\BeckyShopping.csproj.CopyComplete
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
