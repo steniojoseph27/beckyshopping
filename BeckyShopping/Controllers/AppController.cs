@@ -1,4 +1,5 @@
-﻿using BeckyShopping.ViewModels;
+﻿using BeckyShopping.Services;
+using BeckyShopping.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BeckyShopping.Controllers
 {
     public class AppController : Controller
     {
+        private readonly IMailService _mailService;
+
+        public AppController(IMailService mailService)
+        {
+            _mailService = mailService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -27,10 +35,9 @@ namespace BeckyShopping.Controllers
             if (ModelState.IsValid)
             {
                 // Send the email
-            }
-            else
-            {
-                // Show the errors
+                _mailService.SendMessage("beckyonlineshopping@gmail.com", model.Subject, $"From: {model.Name} - {model.Email}, Message: {model.Message}");
+                ViewBag.UserMessage = "Mail Sent";
+                ModelState.Clear();
             }
             return View();
         }
