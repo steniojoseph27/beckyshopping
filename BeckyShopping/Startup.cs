@@ -17,6 +17,8 @@ namespace BeckyShopping
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages()
+                    .AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,12 +28,18 @@ namespace BeckyShopping
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/error");
+            }
 
             app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(cfg =>
             {
+                cfg.MapRazorPages();
+
                 cfg.MapControllerRoute("Default",
                     "/{controller}/{action}/{id?}",
                     new { controller = "App", action = "Index" });
