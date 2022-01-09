@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DutchTreat.Data.Entities;
+using BeckyShopping.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -33,13 +33,13 @@ namespace BeckyShopping.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Product>()
-              .Property(p => p.Price)
-              .HasColumnType("money");
+            //modelBuilder.Entity<Product>()
+            //  .Property(p => p.Price)
+            //  .HasColumnType("money");
 
-            modelBuilder.Entity<OrderItem>()
-              .Property(o => o.UnitPrice)
-              .HasColumnType("money");
+            //modelBuilder.Entity<OrderItem>()
+            //  .Property(o => o.UnitPrice)
+            //  .HasColumnType("money");
 
             modelBuilder.Entity<Order>()
               .HasData(new Order()

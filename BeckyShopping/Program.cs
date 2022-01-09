@@ -1,6 +1,9 @@
+using BeckyShopping.Data;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -14,24 +17,43 @@ namespace BeckyShopping
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+
+            if (args.Length > 0 && args[0].ToLower() == "/seed")
+            {
+                RunSeeding(host);
+                return;
+            }
+
+            host.Run();
+        }
+
+        private static void RunSeeding(IHost host)
+        {
+            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+
+            using (var scope = scopeFactory.CreateScope())
+            {
+                var seeder = scope.ServiceProvider.GetService<ShoppingSeeder>();
+                seeder.Seed();
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration(AddConfiguration)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+        Host.CreateDefaultBuilder(args)
+            .ConfigureAppConfiguration(SetupConfiguration)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
 
-        private static void AddConfiguration(HostBuilderContext ctx, IConfigurationBuilder bldr)
+        private static void SetupConfiguration(HostBuilderContext ctx, IConfigurationBuilder builder)
         {
-            bldr.Sources.Clear();
+            // Removing the default configuration options
+            builder.Sources.Clear();
 
-            bldr.SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("config.json")
-                .AddEnvironmentVariables();
+            builder.AddJsonFile("config.json", false, true)
+                   .AddEnvironmentVariables();
         }
     }
 }
