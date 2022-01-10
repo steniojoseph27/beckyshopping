@@ -12,6 +12,9 @@ namespace BeckyShopping.Data
         IEnumerable<Product> GetAllProducts();
         IEnumerable<Product> GetProductsByCategory(string category);
 
+        IEnumerable<Order> GetAllOrders();
+        Order GetAllOrderById(int id);
         bool SaveAll();
+        void AddEntity(object model);
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BeckyShopping.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace BeckyShopping.Data
@@ -17,6 +18,28 @@ namespace BeckyShopping.Data
         {
             _ctx = ctx;
             _logger = logger;
+        }
+
+        public void AddEntity(object model)
+        {
+            _ctx.Add(model);
+        }
+
+        public Order GetAllOrderById(int id)
+        {
+            return _ctx.Orders
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .Where(o => o.Id == id)
+                .FirstOrDefault();
+        }
+
+        public IEnumerable<Order> GetAllOrders()
+        {
+            return _ctx.Orders
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .ToList();
         }
 
         public IEnumerable<Product> GetAllProducts()

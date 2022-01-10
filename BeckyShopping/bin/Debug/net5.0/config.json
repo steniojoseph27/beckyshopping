@@ -1,5 +1,11 @@
 {
 	"ConnectionStrings": {
 		"ShoppingContextDB": "Data Source=(localdb)\\ProjectsV13;Initial Catalog=BeckyShoppingDb;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=true;"
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning"
+		}
 	}
 }

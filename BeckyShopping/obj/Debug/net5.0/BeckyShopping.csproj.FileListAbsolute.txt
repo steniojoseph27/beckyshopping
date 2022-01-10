@@ -388,3 +388,6 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\runtime
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\config.json
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\obj\Debug\net5.0\Razor\Views\App\Shop.cshtml.g.cs
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Data\product.json
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
