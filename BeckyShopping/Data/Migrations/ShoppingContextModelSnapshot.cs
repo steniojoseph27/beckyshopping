@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace BeckyShopping.Migrations
+namespace BeckyShopping.Data.Migrations
 {
     [DbContext(typeof(ShoppingContext))]
     partial class ShoppingContextModelSnapshot : ModelSnapshot
@@ -40,7 +40,7 @@ namespace BeckyShopping.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2022, 1, 9, 13, 30, 19, 78, DateTimeKind.Utc).AddTicks(2559),
+                            OrderDate = new DateTime(2022, 1, 11, 8, 42, 51, 6, DateTimeKind.Utc).AddTicks(2797),
                             OrderNumber = "12345"
                         });
                 });
@@ -95,6 +95,9 @@ namespace BeckyShopping.Migrations
                     b.Property<string>("ProductDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductImageId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductOrigin")
                         .HasColumnType("nvarchar(max)");
 
@@ -102,9 +105,6 @@ namespace BeckyShopping.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Size")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Supplier")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SupplierId")

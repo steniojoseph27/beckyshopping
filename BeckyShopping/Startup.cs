@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace BeckyShopping
@@ -34,6 +35,8 @@ namespace BeckyShopping
             services.AddTransient<IMailService, NullMailService>();
 
             services.AddTransient<ShoppingSeeder>();
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddScoped<IShoppingRepository, ShoppingRepository>();
 

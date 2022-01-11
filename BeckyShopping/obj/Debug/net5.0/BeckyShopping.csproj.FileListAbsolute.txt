@@ -127,7 +127,6 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Mi
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -153,8 +152,6 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Mi
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.ObjectPool.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.dll
-C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.Primitives.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Extensions.WebEncoders.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.JSInterop.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Microsoft.Net.Http.Headers.dll
@@ -253,7 +250,6 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\Sy
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Resources.Reader.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Resources.ResourceManager.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Resources.Writer.dll
-C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Runtime.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\refs\System.Runtime.Extensions.dll
@@ -391,3 +387,9 @@ C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Data\pr
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\admin\source\repos\beckyshopping\BeckyShopping\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

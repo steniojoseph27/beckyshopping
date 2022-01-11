@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace BeckyShopping.Migrations
+namespace BeckyShopping.Data.Migrations
 {
     [DbContext(typeof(ShoppingContext))]
-    [Migration("20220109133020_SeedData")]
-    partial class SeedData
+    [Migration("20220111083536_InitialDb")]
+    partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,7 +42,7 @@ namespace BeckyShopping.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2022, 1, 9, 13, 30, 19, 78, DateTimeKind.Utc).AddTicks(2559),
+                            OrderDate = new DateTime(2022, 1, 11, 8, 35, 35, 604, DateTimeKind.Utc).AddTicks(8069),
                             OrderNumber = "12345"
                         });
                 });
@@ -97,6 +97,9 @@ namespace BeckyShopping.Migrations
                     b.Property<string>("ProductDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductImageId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductOrigin")
                         .HasColumnType("nvarchar(max)");
 
@@ -104,9 +107,6 @@ namespace BeckyShopping.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Size")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Supplier")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SupplierId")

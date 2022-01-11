@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace BeckyShopping.Migrations
+namespace BeckyShopping.Data.Migrations
 {
     [DbContext(typeof(ShoppingContext))]
-    [Migration("20220108232721_InitialDb")]
-    partial class InitialDb
+    [Migration("20220111084251_SeedData")]
+    partial class SeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace BeckyShopping.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DutchTreat.Data.Entities.Order", b =>
+            modelBuilder.Entity("BeckyShopping.Data.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,12 +34,7 @@ namespace BeckyShopping.Migrations
                     b.Property<string>("OrderNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Orders");
 
@@ -47,12 +42,12 @@ namespace BeckyShopping.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2022, 1, 8, 23, 27, 20, 17, DateTimeKind.Utc).AddTicks(7269),
+                            OrderDate = new DateTime(2022, 1, 11, 8, 42, 51, 6, DateTimeKind.Utc).AddTicks(2797),
                             OrderNumber = "12345"
                         });
                 });
 
-            modelBuilder.Entity("DutchTreat.Data.Entities.OrderItem", b =>
+            modelBuilder.Entity("BeckyShopping.Data.Entities.OrderItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +64,7 @@ namespace BeckyShopping.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("UnitPrice")
-                        .HasColumnType("money");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -80,7 +75,7 @@ namespace BeckyShopping.Migrations
                     b.ToTable("OrderItem");
                 });
 
-            modelBuilder.Entity("DutchTreat.Data.Entities.Product", b =>
+            modelBuilder.Entity("BeckyShopping.Data.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -97,9 +92,12 @@ namespace BeckyShopping.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("money");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ProductDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductImageId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductOrigin")
@@ -111,9 +109,6 @@ namespace BeckyShopping.Migrations
                     b.Property<string>("Size")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Supplier")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SupplierId")
                         .HasColumnType("nvarchar(max)");
 
@@ -122,80 +117,13 @@ namespace BeckyShopping.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("DutchTreat.Data.Entities.StoreUser", b =>
+            modelBuilder.Entity("BeckyShopping.Data.Entities.OrderItem", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("StoreUser");
-                });
-
-            modelBuilder.Entity("DutchTreat.Data.Entities.Order", b =>
-                {
-                    b.HasOne("DutchTreat.Data.Entities.StoreUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("DutchTreat.Data.Entities.OrderItem", b =>
-                {
-                    b.HasOne("DutchTreat.Data.Entities.Order", "Order")
+                    b.HasOne("BeckyShopping.Data.Entities.Order", "Order")
                         .WithMany("Items")
                         .HasForeignKey("OrderId");
 
-                    b.HasOne("DutchTreat.Data.Entities.Product", "Product")
+                    b.HasOne("BeckyShopping.Data.Entities.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
 
@@ -204,7 +132,7 @@ namespace BeckyShopping.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("DutchTreat.Data.Entities.Order", b =>
+            modelBuilder.Entity("BeckyShopping.Data.Entities.Order", b =>
                 {
                     b.Navigation("Items");
                 });

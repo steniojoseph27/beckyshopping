@@ -34,36 +34,19 @@ namespace BeckyShopping.Data
                 
                 _ctx.Products.AddRange(products);
 
-                var order = new Order()
+                var order = _ctx.Orders.Where(o => o.Id == 1).FirstOrDefault();
+                if (order != null)
                 {
-                    OrderDate = DateTime.Today,
-                    OrderNumber = "10000",
-                    Items = new List<OrderItem>()
+                    order.Items = new List<OrderItem>()
                     {
                         new OrderItem()
                         {
-                            Product = products.First(),
-                            Quantity = 5,
-                            UnitPrice = products.First().Price
+                          Product = products.First(),
+                          Quantity = 5,
+                          UnitPrice = products.First().Price
                         }
-                    }
-                };
-
-                _ctx.Orders.Add(order);
-
-                //var order = _ctx.Orders.Where(o => o.Id == 1).FirstOrDefault();
-                //if (order != null)
-                //{
-                //    order.Items = new List<OrderItem>()
-                //    {
-                //        new OrderItem()
-                //        {
-                //          Product = products.First(),
-                //          Quantity = 5,
-                //          UnitPrice = products.First().Price
-                //        }
-                //    };
-                //}
+                    };
+                }
 
                 _ctx.SaveChanges();
             }
