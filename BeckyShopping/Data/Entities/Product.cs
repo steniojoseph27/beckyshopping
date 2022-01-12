@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DutchTreat.Data.Entities
+namespace BeckyShopping.Data.Entities
 {
   public class Product
   {
@@ -15,7 +15,7 @@ namespace DutchTreat.Data.Entities
     public string Name { get; set; }
     public string ProductDescription { get; set; }
     public string SupplierId { get; set; }
-    public string Supplier { get; set; }
+    public string ProductImageId { get; set; }
     public DateTime ReleaseDate { get; set; }
     public DateTime ExpirationDate { get; set; }
     public string ProductOrigin { get; set; }

@@ -26,8 +26,15 @@ using BeckyShopping.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\admin\source\repos\beckyshopping\BeckyShopping\Views\_ViewImports.cshtml"
+using BeckyShopping.Data.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"73efa7f811fdcf4eec234996d37e9ab8584497e6", @"/Views/App/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"49bdb35f34dd68ec7c429f010b3eb768123d4336", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f8908d2c8dc1f6c3141234768e7bc8534a54cb31", @"/Views/_ViewImports.cshtml")]
     public class Views_App_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

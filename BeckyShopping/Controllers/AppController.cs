@@ -1,21 +1,20 @@
-﻿using BeckyShopping.Services;
+﻿using BeckyShopping.Data;
+using BeckyShopping.Services;
 using BeckyShopping.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeckyShopping.Controllers
 {
     public class AppController : Controller
     {
         private readonly IMailService _mailService;
+        private readonly IShoppingRepository _repository;
 
-        public AppController(IMailService mailService)
+        public AppController(IMailService mailService, IShoppingRepository repository)
         {
             _mailService = mailService;
+            _repository = repository;
         }
 
         public IActionResult Index()
@@ -47,6 +46,14 @@ namespace BeckyShopping.Controllers
             ViewBag.Title = "About Us";
 
             return View();
+        }
+
+        [Authorize]
+        public IActionResult Shop()
+        {
+            var results = _repository.GetAllProducts();
+
+            return View(results);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace DutchTreat.Data.Entities
+﻿namespace BeckyShopping.Data.Entities
 {
   public class OrderItem
   {
