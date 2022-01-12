@@ -1,6 +1,7 @@
 ﻿using BeckyShopping.Data;
 using BeckyShopping.Services;
 using BeckyShopping.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BeckyShopping.Controllers
@@ -47,6 +48,7 @@ namespace BeckyShopping.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Shop()
         {
             var results = _repository.GetAllProducts();

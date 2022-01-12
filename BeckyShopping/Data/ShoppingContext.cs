@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BeckyShopping.Data.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace BeckyShopping.Data
 {
-    public class ShoppingContext : DbContext
+    public class ShoppingContext : IdentityDbContext<StoreUser>
     {
         private readonly IConfiguration _config;
 
@@ -17,7 +18,6 @@ namespace BeckyShopping.Data
         {
             _config = config;
         }
-
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -33,13 +33,13 @@ namespace BeckyShopping.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Entity<Product>()
-            //  .Property(p => p.Price)
-            //  .HasColumnType("money");
+            modelBuilder.Entity<Product>()
+              .Property(p => p.Price)
+              .HasColumnType("money");
 
-            //modelBuilder.Entity<OrderItem>()
-            //  .Property(o => o.UnitPrice)
-            //  .HasColumnType("money");
+            modelBuilder.Entity<OrderItem>()
+              .Property(o => o.UnitPrice)
+              .HasColumnType("money");
 
             modelBuilder.Entity<Order>()
               .HasData(new Order()

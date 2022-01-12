@@ -35,7 +35,7 @@ namespace BeckyShopping
             using (var scope = scopeFactory.CreateScope())
             {
                 var seeder = scope.ServiceProvider.GetService<ShoppingSeeder>();
-                seeder.Seed();
+                seeder.SeedAsync().Wait();
             }
         }
 
