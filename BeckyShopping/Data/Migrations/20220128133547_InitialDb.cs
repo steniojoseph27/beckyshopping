@@ -228,7 +228,7 @@ namespace BeckyShopping.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Orders",
                 columns: new[] { "Id", "OrderDate", "OrderNumber", "UserId" },
-                values: new object[] { 1, new DateTime(2022, 1, 12, 2, 5, 54, 230, DateTimeKind.Utc).AddTicks(1520), "12345", null });
+                values: new object[] { 1, new DateTime(2022, 1, 28, 13, 35, 47, 46, DateTimeKind.Utc).AddTicks(8987), "12345", null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
