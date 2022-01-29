@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj": {}
+    "C:\\Users\\admin\\source\\repos\\steniojoseph27\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj": {
+    "C:\\Users\\admin\\source\\repos\\steniojoseph27\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\steniojoseph27\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj",
         "projectName": "BeckyShopping",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj",
+        "projectPath": "C:\\Users\\admin\\source\\repos\\steniojoseph27\\beckyshopping\\BeckyShopping\\BeckyShopping.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\beckyshopping\\BeckyShopping\\obj\\",
+        "outputPath": "C:\\Users\\admin\\source\\repos\\steniojoseph27\\beckyshopping\\BeckyShopping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -80,6 +77,12 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
             }
           },
           "imports": [
@@ -100,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -45,7 +45,7 @@ namespace BeckyShopping.Data.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2022, 1, 12, 2, 5, 54, 230, DateTimeKind.Utc).AddTicks(1520),
+                            OrderDate = new DateTime(2022, 1, 28, 15, 7, 38, 253, DateTimeKind.Utc).AddTicks(9909),
                             OrderNumber = "12345"
                         });
                 });

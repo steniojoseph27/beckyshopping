@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BeckyShopping.Data.Migrations
 {
     [DbContext(typeof(ShoppingContext))]
-    [Migration("20220112020555_InitialDb")]
+    [Migration("20220128133547_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,7 @@ namespace BeckyShopping.Data.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2022, 1, 12, 2, 5, 54, 230, DateTimeKind.Utc).AddTicks(1520),
+                            OrderDate = new DateTime(2022, 1, 28, 13, 35, 47, 46, DateTimeKind.Utc).AddTicks(8987),
                             OrderNumber = "12345"
                         });
                 });
