@@ -15,4 +15,13 @@ export class Order {
     orderDate: Date = new Date();
     orderNumber: string | undefined;
     items: OrderItem[] = [];
+
+    get subtotal(): number {
+        const result = this.items.reduce(
+            (total, val) => {
+                return total + (val.unitPrice * val.quantity);
+        }, 0);
+
+        return result;
+    }
 }
